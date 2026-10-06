@@ -1,0 +1,46 @@
+/* Button base plus the shared action row used by the hero and contact sections. */
+
+.hero-actions,
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 49px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 21px;
+  font-size: .84rem;
+  font-weight: 700;
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--rust);
+  color: #fff;
+}
+
+.button-primary:hover {
+  background: var(--rust-light);
+}
+
+.button-outline {
+  border: 1px solid rgba(217, 166, 140, .66);
+  color: var(--bone);
+}
+
+html[data-theme="light"] .button-outline {
+  color: var(--ink);
+}
+
+.button-outline:hover {
+  border-color: var(--sand);
+  background: rgba(217, 166, 140, .08);
+}

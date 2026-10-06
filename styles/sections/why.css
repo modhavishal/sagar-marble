@@ -1,0 +1,47 @@
+/* "Why us" section: heading on the left, numbered reasons on the right. */
+
+.why-section {
+  background:
+    radial-gradient(ellipse at 14% 84%, rgba(168, 68, 47, .12), transparent 38%),
+    var(--ink-soft);
+}
+
+html[data-theme="light"] .why-section {
+  background:
+    radial-gradient(ellipse at 14% 84%, rgba(168, 68, 47, .08), transparent 38%),
+    linear-gradient(180deg, #f5eee5, #f4e9dd);
+}
+
+.why-layout {
+  display: grid;
+  grid-template-columns: .86fr 1.14fr;
+  align-items: start;
+  gap: 105px;
+}
+
+.why-heading .section-title {
+  max-width: 410px;
+}
+
+.reason-list {
+  border-top: 1px solid var(--line);
+}
+
+.reason {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 17px;
+  padding: 21px 0 23px;
+  border-bottom: 1px solid var(--line);
+}
+
+.reason-number {
+  padding-top: 4px;
+  color: var(--brass);
+  font-size: .7rem;
+  letter-spacing: .1em;
+}
+
+.reason h3 {
+  font-size: 1.3rem;
+}

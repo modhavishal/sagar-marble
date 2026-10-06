@@ -1,0 +1,23 @@
+/* Slim footer band with the wordmark, tagline and copyright line. */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  display: flex;
+  min-height: 102px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.footer-inner .brand {
+  font-size: 1.32rem;
+}
+
+.footer-inner p,
+.footer-inner > span {
+  color: #a99d92;
+  font-size: .73rem;
+}

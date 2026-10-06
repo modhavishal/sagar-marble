@@ -1,0 +1,116 @@
+/* 404 page: centred message over a faint stone-grain motif. */
+
+.not-found {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  overflow: hidden;
+  place-items: center;
+  padding: 48px 24px;
+  background:
+    radial-gradient(ellipse at 75% 48%, rgba(168, 68, 47, .19), transparent 42%),
+    linear-gradient(125deg, var(--bg), var(--bg-soft));
+}
+
+.not-found::before,
+.not-found::after {
+  position: absolute;
+  width: min(68vw, 680px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(199, 154, 75, .12);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.not-found::after {
+  width: min(49vw, 490px);
+  border-color: rgba(217, 166, 140, .1);
+}
+
+.not-found-content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 620px);
+  text-align: center;
+  animation: fadeUp .7s ease both;
+}
+
+.not-found-brand {
+  display: inline-block;
+  margin-bottom: 64px;
+}
+
+.not-found-eyebrow {
+  color: var(--sand);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.not-found-code {
+  margin: 7px 0 -12px;
+  color: rgba(217, 166, 140, .17);
+  font-family: var(--serif), Georgia, serif;
+  font-size: clamp(8rem, 25vw, 14rem);
+  letter-spacing: -.09em;
+  line-height: .95;
+}
+
+.not-found-content h1 {
+  position: relative;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  letter-spacing: -.045em;
+}
+
+.not-found-copy {
+  max-width: 440px;
+  margin: 17px auto 28px;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.not-found-location {
+  display: block;
+  margin-top: 58px;
+  color: var(--muted);
+  font-size: .72rem;
+  letter-spacing: .07em;
+}
+
+.not-found-location span {
+  padding: 0 6px;
+  color: var(--brass);
+}
+
+.not-found-grain {
+  position: absolute;
+  right: 8%;
+  bottom: 12%;
+  display: flex;
+  width: min(260px, 28vw);
+  flex-direction: column;
+  gap: 7px;
+  opacity: .36;
+  transform: rotate(-9deg);
+}
+
+.not-found-grain span {
+  height: 19px;
+  border: 1px solid rgba(255, 215, 185, .18);
+  background: linear-gradient(100deg, #8d3425, #c06449 48%, #743024);
+  box-shadow: 0 7px 12px rgba(0, 0, 0, .18);
+}
+
+.not-found-grain span:nth-child(2) {
+  margin-left: 12%;
+  background: linear-gradient(100deg, #a54432, #d17e5d 48%, #783023);
+}

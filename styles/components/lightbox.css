@@ -1,0 +1,448 @@
+
+/* =========================================================
+   FULLSCREEN LIGHTBOX
+   ========================================================= */
+
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  width: 100vw;
+  height: 100dvh;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  background: rgba(0, 0, 0, 0.94);
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+.lightbox {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  box-shadow: none;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGE AREA
+   ========================================================= */
+
+.lightbox-image-area {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  touch-action: none;
+  user-select: none;
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.lightbox-image {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 92vw;
+  max-height: 92dvh;
+
+  object-fit: contain;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transform-origin: center center;
+
+  will-change: transform;
+
+  cursor: default;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   ZOOMED IMAGE
+   ========================================================= */
+
+.lightbox-image.is-zoomed {
+  max-width: none;
+  max-height: none;
+
+  cursor: grab;
+}
+
+.lightbox-image.is-dragging {
+  cursor: grabbing;
+}
+
+
+/* =========================================================
+   TOP RIGHT CONTROLS
+   ========================================================= */
+
+.lightbox-controls {
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   CONTROL BUTTON
+   ========================================================= */
+
+.lightbox-control {
+  display: grid;
+  place-items: center;
+
+  width: 52px;
+  height: 52px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  color: #fff;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.lightbox-control:hover:not(:disabled) {
+  background: var(--rust);
+
+  border-color: var(--rust);
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.lightbox-control:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.lightbox-control:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   BIG + / -
+   ========================================================= */
+
+.lightbox-zoom-symbol {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 36px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   BIG X
+   ========================================================= */
+
+.lightbox-close-symbol {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 36px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   PREVIOUS / NEXT
+   ========================================================= */
+
+.lightbox-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 20;
+
+  display: grid;
+  place-items: center;
+
+  width: 54px;
+  height: 54px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  color: #fff;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* =========================================================
+   ARROW HOVER
+   ========================================================= */
+
+.lightbox-arrow:hover {
+  background: var(--rust);
+
+  border-color: var(--rust);
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+
+/* =========================================================
+   ARROW ACTIVE
+   ========================================================= */
+
+.lightbox-arrow:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+
+/* =========================================================
+   ARROW ICON
+   ========================================================= */
+
+.lightbox-arrow span {
+  display: block;
+
+  margin-top: -5px;
+
+  font-size: 42px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   ARROW POSITION
+   ========================================================= */
+
+.lightbox-previous {
+  left: 24px;
+
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 24px;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.lightbox-control:focus-visible,
+.lightbox-arrow:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .lightbox-controls {
+    top: 16px;
+    right: 16px;
+
+    gap: 8px;
+  }
+
+  .lightbox-control {
+    width: 48px;
+    height: 48px;
+  }
+
+  .lightbox-zoom-symbol,
+  .lightbox-close-symbol {
+    font-size: 32px;
+  }
+
+  .lightbox-arrow {
+    width: 46px;
+    height: 46px;
+  }
+
+  .lightbox-arrow span {
+    font-size: 36px;
+  }
+
+  .lightbox-previous {
+    left: 14px;
+  }
+
+  .lightbox-next {
+    right: 14px;
+  }
+
+  .lightbox-image {
+    max-width: 94vw;
+    max-height: 88dvh;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .lightbox-controls {
+    top: 12px;
+    right: 12px;
+
+    gap: 6px;
+  }
+
+  .lightbox-control {
+    width: 44px;
+    height: 44px;
+  }
+
+  .lightbox-zoom-symbol,
+  .lightbox-close-symbol {
+    font-size: 29px;
+  }
+
+  .lightbox-arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .lightbox-arrow span {
+    font-size: 32px;
+  }
+
+  .lightbox-previous {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox-image,
+  .lightbox-control,
+  .lightbox-arrow {
+    transition: none;
+  }
+}
+
+

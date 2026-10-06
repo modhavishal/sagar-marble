@@ -1,0 +1,27 @@
+/* Shared rhythm and heading styles for every content section. */
+
+.section {
+  padding: 112px 0;
+}
+
+.section-heading {
+  margin-bottom: 43px;
+}
+
+.section-heading .eyebrow,
+.why-heading .eyebrow,
+.contact-copy > .eyebrow {
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: clamp(2.35rem, 4.5vw, 3.65rem);
+  letter-spacing: -.035em;
+}
+
+.section-intro {
+  max-width: 54ch;
+  margin-top: 15px;
+  color: var(--muted);
+  font-size: .94rem;
+}

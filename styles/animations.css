@@ -1,0 +1,32 @@
+/* Keyframes shared by the hero artwork and the 404 panel. */
+
+@keyframes slab-arrive {
+  from {
+    transform: translateX(90px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatPanel {
+  0% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}

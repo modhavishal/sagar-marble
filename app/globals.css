@@ -1,0 +1,33 @@
+/* Site stylesheet entry point.
+   Next.js loads this from app/layout.tsx; it just pulls the partials together
+   in cascade order:
+
+     tokens      → design tokens for both colour schemes
+     base        → reset, typography, layout container
+     components  → reusable pieces (eyebrow, buttons, sections, lightbox)
+     layout      → header and footer chrome
+     sections    → one file per page section
+     animations  → shared @keyframes
+     responsive  → narrow-screen overrides, last so they win
+
+   Edit the partial that matches what you are changing, not this file. */
+
+@import '../styles/tokens.css';
+@import '../styles/base.css';
+@import '../styles/components/eyebrow.css';
+@import '../styles/components/actions.css';
+@import '../styles/components/section.css';
+@import '../styles/layout/nav.css';
+@import '../styles/sections/hero.css';
+@import '../styles/sections/products.css';
+@import '../styles/sections/machinery.css';
+@import '../styles/sections/why.css';
+@import '../styles/sections/gallery.css';
+@import '../styles/components/lightbox.css';
+@import '../styles/sections/contact.css';
+@import '../styles/layout/footer.css';
+@import '../styles/components/whatsapp-float.css';
+@import '../styles/sections/not-found.css';
+@import '../styles/animations.css';
+@import '../styles/responsive.css';
+

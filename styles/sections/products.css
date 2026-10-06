@@ -1,0 +1,88 @@
+/* "Our collection" grid: three cards with photo, number and description. */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--card);
+  transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  animation: fadeUp .75s ease both;
+}
+
+.product-card:nth-child(2) { animation-delay: .08s; }
+.product-card:nth-child(3) { animation-delay: .16s; }
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(217, 166, 140, .58);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, .12);
+}
+
+.product-image {
+  position: relative;
+  height: 285px;
+  overflow: hidden;
+  background: #59433a;
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.045);
+}
+
+/* Alternative CSS textures for a product that has no photo. */
+.product-image.granite {
+  background:
+    radial-gradient(ellipse at 24% 28%, rgba(234, 231, 223, .44) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 69% 60%, rgba(210, 204, 194, .3) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 45% 80%, rgba(0, 0, 0, .7) 0 2px, transparent 3px),
+    linear-gradient(135deg, #343238, #77716e 45%, #29272b);
+  background-size: 17px 21px, 23px 19px, 29px 26px, 100% 100%;
+}
+
+.product-image.tiles {
+  background:
+    linear-gradient(90deg, transparent 97%, rgba(61, 45, 34, .55) 98%),
+    linear-gradient(transparent 97%, rgba(61, 45, 34, .55) 98%),
+    linear-gradient(135deg, #ded1be, #ad9a82);
+  background-size: 50% 50%, 50% 50%, 100% 100%;
+}
+
+.product-number {
+  position: absolute;
+  right: 15px;
+  bottom: 13px;
+  color: rgba(255, 255, 255, .8);
+  font-size: .7rem;
+  letter-spacing: .12em;
+}
+
+.product-copy {
+  min-height: 137px;
+  padding: 23px 22px 25px;
+}
+
+.product-copy h3,
+.reason h3,
+.contact-person h3 {
+  font-size: 1.35rem;
+}
+
+.product-copy p,
+.reason p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: .84rem;
+}

@@ -1,0 +1,36 @@
+/* Design tokens. Every colour in the site resolves back to one of these
+   variables, so the dark and light schemes only need to be defined here. */
+
+:root {
+  color-scheme: dark;
+  --bg: #1f1612;
+  --bg-soft: #2a1d17;
+  --ink: #1f1612;
+  --ink-soft: #2a1d17;
+  --bone: #f3ece4;
+  --rust: #a8442f;
+  --rust-light: #c35d43;
+  --sand: #d9a68c;
+  --brass: #c79a4b;
+  --muted: #c9bdb1;
+  --line: rgba(243, 236, 228, .16);
+  --card: rgba(255, 255, 255, .018);
+  --soft-panel: rgba(255, 255, 255, .04);
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f6f0e7;
+  --bg-soft: #f0e4d6;
+  --ink: #1d1713;
+  --ink-soft: #f5efe9;
+  --bone: #251d18;
+  --rust: #b4513a;
+  --rust-light: #cc624a;
+  --sand: #cc8d6f;
+  --brass: #b18332;
+  --muted: #5a4c44;
+  --line: rgba(33, 22, 18, .12);
+  --card: rgba(255, 255, 255, .34);
+  --soft-panel: rgba(36, 24, 20, .03);
+}

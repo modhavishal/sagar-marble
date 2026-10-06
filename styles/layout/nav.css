@@ -1,0 +1,77 @@
+/* Fixed header: wordmark, in-page links and the theme toggle. */
+
+.site-nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(31, 22, 18, .88);
+  backdrop-filter: blur(12px);
+}
+
+html[data-theme="light"] .site-nav {
+  background: rgba(255, 249, 242, .74);
+}
+
+.nav-inner {
+  display: flex;
+  height: 76px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: var(--serif), Georgia, serif;
+  font-size: 1.55rem;
+  letter-spacing: -.04em;
+}
+
+.brand span {
+  color: var(--sand);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  color: var(--muted);
+  font-size: .86rem;
+}
+
+.nav-links a {
+  transition: color .2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--bone);
+}
+
+.nav-links .nav-contact {
+  border: 1px solid rgba(217, 166, 140, .65);
+  padding: 9px 17px;
+  color: var(--bone);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--soft-panel);
+  color: var(--bone);
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px) scale(1.03);
+  border-color: rgba(199, 154, 75, .7);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}

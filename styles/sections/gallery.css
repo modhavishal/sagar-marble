@@ -1,0 +1,84 @@
+/* Photo mosaic. Tile sizes are driven by the modifier class on each figure. */
+
+.gallery-section {
+  padding-bottom: 122px;
+}
+
+.gallery-heading {
+  margin-bottom: 38px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 190px;
+  grid-auto-flow: dense;
+  gap: 14px;
+}
+
+.gallery figure {
+  position: relative;
+  overflow: hidden;
+  background: #392720;
+}
+
+.gallery-trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.gallery-item-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item-2,
+.gallery-item-3 {
+  grid-column: span 2;
+}
+
+.gallery figure::after {
+  position: absolute;
+  inset: 25% 0 0;
+  background: linear-gradient(transparent, rgba(21, 14, 11, .78));
+  content: "";
+  pointer-events: none;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(.2, .7, .2, 1), filter .4s ease;
+}
+
+.gallery figure:hover img {
+  transform: scale(1.055);
+  filter: saturate(1.08);
+}
+
+.gallery figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 17px;
+  bottom: 15px;
+  left: 17px;
+  color: #fff;
+  font-family: var(--serif), Georgia, serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, .3);
+  pointer-events: none;
+}
+
+.gallery-item-1 figcaption {
+  right: 24px;
+  bottom: 21px;
+  left: 24px;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
