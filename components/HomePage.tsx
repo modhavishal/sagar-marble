@@ -36,7 +36,7 @@ export function HomePage() {
         <ContactSection />
       </main>
 
-      <SiteFooter />
+     <SiteFooter theme={theme} />
       <WhatsAppButton />
       <Lightbox images={galleryImages} controller={lightbox} />
     </MotionConfig>
