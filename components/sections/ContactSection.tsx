@@ -10,7 +10,7 @@ import {
 } from '@/lib/constants';
 import { contacts } from '@/data/site';
 
-/** Address, phone numbers, WhatsApp and the embedded map. */
+/** સરનામું, ફોન નંબર, WhatsApp અને embedded map. */
 export function ContactSection() {
   return (
     <motion.section
@@ -23,10 +23,14 @@ export function ContactSection() {
     >
       <div className="wrap contact-layout">
         <div className="contact-copy">
-          <p className="eyebrow">Come say hello</p>
-          <h2 className="section-title">Let’s find your stone.</h2>
+          <p className="eyebrow">મળવા જરૂર આવો</p>
+
+          <h2 className="section-title">
+            તમારો પથ્થર પસંદ કરીએ.
+          </h2>
+
           <p className="section-intro">
-            Visit us on {ADDRESS.street}, {ADDRESS.locality}, {ADDRESS.region}.
+            {ADDRESS.street}, {ADDRESS.locality}, {ADDRESS.region} ખાતે અમારી મુલાકાત લો.
           </p>
 
           <div className="contact-people">
@@ -40,8 +44,9 @@ export function ContactSection() {
 
           <div className="contact-actions">
             <a className="button button-primary" href={PHONE_HREF}>
-              Call us
+              અમને કૉલ કરો
             </a>
+
             <a
               className="button button-outline"
               href={WHATSAPP_CHAT_URL}
@@ -58,17 +63,18 @@ export function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Open directions <span aria-hidden="true">↗</span>
+            રસ્તો જુઓ <span aria-hidden="true">↗</span>
           </a>
         </div>
 
         <div className="map-frame">
           <iframe
-            title="Map showing Sagar Marble in Pata Village, Gujarat"
+            title="પાટા ગામ, ગુજરાતમાં સાગર માર્બલનું સ્થાન દર્શાવતો નકશો"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             src={MAPS_EMBED_URL}
           />
+
           <p>
             {ADDRESS.street}, {ADDRESS.locality}
           </p>

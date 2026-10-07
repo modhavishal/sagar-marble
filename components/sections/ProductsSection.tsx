@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { products } from '@/data/products';
 
-/** Collection grid of the three stone types sold at the yard. */
+/** યાર્ડમાં ઉપલબ્ધ ત્રણ પ્રકારના પથ્થરોનું collection grid. */
 export function ProductsSection() {
   return (
     <motion.section
@@ -16,9 +16,11 @@ export function ProductsSection() {
     >
       <div className="wrap">
         <div className="section-heading">
-          <p className="eyebrow">Our collection</p>
-          <h2 className="section-title">Good stone starts here.</h2>
-          <p className="section-intro">Materials for the spaces you make your own.</p>
+          <p className="eyebrow">અમારો સંગ્રહ</p>
+          <h2 className="section-title">સારો પથ્થર અહીંથી શરૂ થાય છે.</h2>
+          <p className="section-intro">
+            તમારી પસંદગીની જગ્યાઓ માટે યોગ્ય સામગ્રી.
+          </p>
         </div>
 
         <div className="product-grid">
@@ -35,6 +37,7 @@ export function ProductsSection() {
                 <img src={product.image} alt={product.alt} loading="lazy" />
                 <span className="product-number">0{index + 1}</span>
               </div>
+
               <div className="product-copy">
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>

@@ -1,98 +1,98 @@
 import type { GalleryImage } from '@/types';
 
 /**
- * Yard and showroom photos. The first image is the large tile at the top of the
- * gallery; the lightbox lets a visitor step through all of them.
+ * યાર્ડ અને શોરૂમના ફોટા. પહેલો ફોટો ગેલેરીમાં સૌથી મોટા tile તરીકે
+ * દેખાશે; lightbox દ્વારા મુલાકાતી બધા ફોટા જોઈ શકશે.
  */
 export const galleryImages: GalleryImage[] = [
   {
     src: '/images/rajasthani-sandstone-yard.jpg',
-    alt: 'Rajasthani red sandstone slabs stacked in the stone yard',
-    caption: 'Rajasthani sandstone',
+    alt: 'પથ્થરના યાર્ડમાં ગોઠવેલા રાજસ્થાની લાલ સેન્ડસ્ટોનના સ્લેબ',
+    caption: 'રાજસ્થાની લાલ પથ્થર',
   },
   {
     src: '/images/black-granite-slabs.jpg',
-    alt: 'Polished black granite slabs standing in a showroom',
-    caption: 'Black granite',
+    alt: 'શોરૂમમાં ઊભા રાખેલા પોલિશ્ડ કાળા ગ્રેનાઈટના સ્લેબ',
+    caption: 'કાળો ગ્રેનાઈટ',
   },
   {
     src: '/images/sandstone-tile-sample.jpg',
-    alt: 'Four natural sandstone tiles arranged as a sample',
-    caption: 'Natural stone tiles',
+    alt: 'સેમ્પલ તરીકે ગોઠવેલી ચાર કુદરતી સેન્ડસ્ટોન ટાઇલ્સ',
+    caption: 'કુદરતી પથ્થરની ટાઇલ્સ',
   },
   {
     src: '/images/stone-cutting-workshop.jpg',
-    alt: 'Stone cutting line processing red sandstone in a workshop',
-    caption: 'Stone cutting at work',
+    alt: 'વર્કશોપમાં લાલ સેન્ડસ્ટોનનું કટિંગ કરતી મશીનરી',
+    caption: 'પથ્થરનું કટિંગ કાર્ય',
   },
   {
     src: '/images/sandstone-block-stack.jpg',
-    alt: 'Reddish sandstone blocks standing in rows',
-    caption: 'Cut sandstone blocks',
+    alt: 'હારમાં ગોઠવેલા લાલાશ પડતા સેન્ડસ્ટોનના બ્લોક્સ',
+    caption: 'કાપેલા સેન્ડસ્ટોન બ્લોક્સ',
   },
   {
     src: '/images/red-sandstone-slabs.jpg',
-    alt: 'Tall red sandstone slabs displayed together',
-    caption: 'Selected red sandstone',
+    alt: 'એકસાથે પ્રદર્શિત કરેલા ઊંચા લાલ સેન્ડસ્ટોનના સ્લેબ',
+    caption: 'પસંદ કરેલો લાલ સેન્ડસ્ટોન',
   },
   {
     src: '/images/green-marble-slab.jpg',
-    alt: 'Green marble slab with natural veining',
-    caption: 'Natural green marble',
+    alt: 'કુદરતી નસો ધરાવતો લીલો માર્બલનો સ્લેબ',
+    caption: 'કુદરતી લીલો માર્બલ',
   },
   {
     src: '/images/white-marble-slab.jpg',
-    alt: 'Light marble slab displayed in a stone showroom',
-    caption: 'Light marble finish',
+    alt: 'પથ્થરના શોરૂમમાં પ્રદર્શિત કરેલો આછા રંગનો માર્બલ સ્લેબ',
+    caption: 'આછા માર્બલની ફિનિશ',
   },
   {
     src: '/images/grey-granite-slab.jpg',
-    alt: 'Grey granite slab with fine natural grain',
-    caption: 'Grey granite',
+    alt: 'બારીક કુદરતી દાણા ધરાવતો ગ્રે ગ્રેનાઈટનો સ્લેબ',
+    caption: 'ગ્રે ગ્રેનાઈટ',
   },
   {
     src: '/images/green-granite-slab.jpg',
-    alt: 'Green granite slab displayed upright',
-    caption: 'Green granite',
+    alt: 'ઊભો પ્રદર્શિત કરેલો લીલો ગ્રેનાઈટનો સ્લેબ',
+    caption: 'લીલો ગ્રેનાઈટ',
   },
   {
     src: '/images/pink-sandstone-blocks.jpg',
-    alt: 'Pink sandstone slabs arranged in an outdoor yard',
-    caption: 'Pink sandstone',
+    alt: 'બહારના યાર્ડમાં ગોઠવેલા ગુલાબી સેન્ડસ્ટોનના સ્લેબ',
+    caption: 'ગુલાબી સેન્ડસ્ટોન',
   },
   {
     src: '/images/cream-marble-slab.jpg',
-    alt: 'Cream marble slab with delicate veining',
-    caption: 'Cream marble',
+    alt: 'નાજુક નસો ધરાવતો ક્રીમ માર્બલનો સ્લેબ',
+    caption: 'ક્રીમ માર્બલ',
   },
   {
     src: '/images/granite-display-slab.jpg',
-    alt: 'Natural granite slab on display',
-    caption: 'Granite selection',
+    alt: 'પ્રદર્શનમાં રાખેલો કુદરતી ગ્રેનાઈટનો સ્લેબ',
+    caption: 'ગ્રેનાઈટની પસંદગી',
   },
   {
     src: '/images/white-marble-slab-yard.jpg',
-    alt: 'Large white marble slab in the stone yard',
-    caption: 'White marble',
+    alt: 'પથ્થરના યાર્ડમાં રાખેલો મોટો સફેદ માર્બલનો સ્લેબ',
+    caption: 'સફેદ માર્બલ',
   },
   {
     src: '/images/sandstone-yard-wide.jpg',
-    alt: 'Wide view of a sandstone yard with stone blocks',
-    caption: 'A view of the yard',
+    alt: 'પથ્થરના બ્લોક્સ સાથેના સેન્ડસ્ટોન યાર્ડનું વિશાળ દૃશ્ય',
+    caption: 'યાર્ડનું એક દૃશ્ય',
   },
   {
     src: '/images/beige-stone-slab.jpg',
-    alt: 'Beige natural stone slab with a smooth finish',
-    caption: 'Warm beige stone',
+    alt: 'સુંવાળી ફિનિશ ધરાવતો બેજ રંગનો કુદરતી પથ્થરનો સ્લેબ',
+    caption: 'ગરમ બેજ રંગનો પથ્થર',
   },
   {
     src: '/images/white-marble-slabs.jpg',
-    alt: 'White marble slabs stacked outdoors',
-    caption: 'White marble slabs',
+    alt: 'બહાર ગોઠવેલા સફેદ માર્બલના સ્લેબ',
+    caption: 'સફેદ માર્બલના સ્લેબ',
   },
   {
     src: '/images/red-granite-slab.jpg',
-    alt: 'Red granite slab with natural mineral flecks',
-    caption: 'Red granite',
+    alt: 'કુદરતી ખનિજ કણો ધરાવતો લાલ ગ્રેનાઈટનો સ્લેબ',
+    caption: 'લાલ ગ્રેનાઈટ',
   },
 ];

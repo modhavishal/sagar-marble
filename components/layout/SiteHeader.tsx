@@ -24,7 +24,7 @@ export function SiteHeader({ theme, onToggleTheme }: SiteHeaderProps) {
       transition={{ duration: 0.55, ease: [0.22, 0.68, 0, 1] }}
     >
       <div className="wrap nav-inner">
-        <Brand />
+        <Brand theme={theme}   />
 
         <div className="nav-links">
           {navLinks.map((link) => (

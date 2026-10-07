@@ -31,3 +31,21 @@
 @import '../styles/animations.css';
 @import '../styles/responsive.css';
 
+.brand-logo {
+  width: auto;
+  height: 58px;
+  display: block;
+  object-fit: contain;
+}
+
+.brand-logo-dark {
+  display: none;
+}
+
+html[data-theme='dark'] .brand-logo-light {
+  display: none;
+}
+
+html[data-theme='dark'] .brand-logo-dark {
+  display: block;
+}

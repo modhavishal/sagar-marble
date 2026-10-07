@@ -1,47 +1,62 @@
 import type { ContactPerson, NavLink, Reason } from '@/types';
-import { PHONE_NUMBER } from '@/lib/constants';
 
-/** Main navigation, in the order the links appear. */
+import { PHONE_NUMBER, PHONE_NUMBER2 } from '@/lib/constants';
+
+/** મુખ્ય navigation, જે ક્રમમાં links દેખાશે. */
+
 export const navLinks: NavLink[] = [
-  { label: 'Products', href: '#products' },
-  { label: 'Machinery', href: '#machinery' },
-  { label: 'Why us', href: '#why' },
-  { label: 'Gallery', href: '#gallery' },
+  { label: 'ઉત્પાદનો', href: '#products' },
+
+  { label: 'મશીનરી', href: '#machinery' },
+
+  { label: 'અમને કેમ પસંદ કરો', href: '#why' },
+
+  { label: 'ગેલેરી', href: '#gallery' },
 ];
 
-/** Stands apart from the other links with an outlined button style. */
-export const visitLink: NavLink = { label: 'Visit us', href: '#contact' };
+/** અન્ય linksથી અલગ outlined button. */
 
-/** Reasons to buy from the yard, shown in the "Why us" section. */
+export const visitLink: NavLink = {
+  label: 'મુલાકાત લો',
+  href: '#contact',
+};
+
+/** યાર્ડમાંથી ખરીદી કરવાના મુખ્ય કારણો. */
+
 export const reasons: Reason[] = [
   {
-    title: 'Choose in person',
-    description: 'See the colour and finish before you buy.',
+    title: 'રૂબરૂ પસંદ કરો',
+    description: 'ખરીદતા પહેલાં પથ્થરનો રંગ અને ફિનિશ જુઓ.',
   },
+
   {
-    title: 'Cut to your size',
-    description: 'Ask us about sizes and finishes for your site.',
+    title: 'તમારા માપ પ્રમાણે કટિંગ',
+    description: 'તમારા સ્થળ માટે માપ અને ફિનિશ વિશે પૂછો.',
   },
+
   {
-    title: 'Clear pricing',
-    description: 'Get straightforward rates before you order.',
+    title: 'સ્પષ્ટ ભાવ',
+    description: 'ઓર્ડર કરતા પહેલાં સીધા અને સ્પષ્ટ ભાવ મેળવો.',
   },
+
   {
-    title: 'Nearby delivery',
-    description: 'Ask about delivery to Pata and nearby villages.',
+    title: 'નજીકમાં ડિલિવરી',
+    description: 'પાતા અને નજીકના ગામોમાં ડિલિવરી વિશે પૂછો.',
   },
 ];
 
-/** What the water-cooled cutting line gives a customer. */
+/** વોટર-કૂલ્ડ કટિંગ મશીનરીથી ગ્રાહકને મળતા લાભો. */
+
 export const machineryBenefits = [
-  'Exact size',
-  'Smooth edges',
-  'Less wastage',
-  'Custom cutting',
+  'ચોક્કસ માપ',
+  'સપાટ કિનારીઓ',
+  'ઓછો બગાડ',
+  'કસ્ટમ કટિંગ',
 ];
 
-/** People a visitor can phone at the yard. */
+/** યાર્ડ પર ફોન કરી શકાય તેવા વ્યક્તિઓ. */
+
 export const contacts: ContactPerson[] = [
-  { name: 'Deva Modha', phone: PHONE_NUMBER },
-  { name: 'Malde Modha', phone: PHONE_NUMBER },
+  { name: 'દેવા મોઢા', phone: PHONE_NUMBER },
+  { name: 'માલદે મોઢા', phone: PHONE_NUMBER2 },
 ];

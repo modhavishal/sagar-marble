@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import { galleryImages } from '@/data/gallery';
 
 type GallerySectionProps = {
-  /** Called with the index of the image the visitor clicked. */
+  /** મુલાકાતીએ પસંદ કરેલી image નો index મળવા માટે. */
   onOpenImage: (index: number) => void;
 };
 
-/** Mosaic of yard photos; each tile opens the shared lightbox. */
+/** યાર્ડના ફોટાનું mosaic; દરેક ફોટો shared lightbox ખોલે છે. */
 export function GallerySection({ onOpenImage }: GallerySectionProps) {
   return (
     <motion.section
@@ -21,8 +21,11 @@ export function GallerySection({ onOpenImage }: GallerySectionProps) {
     >
       <div className="wrap">
         <div className="section-heading gallery-heading">
-          <p className="eyebrow">From our yard</p>
-          <h2 className="section-title">See the stone for yourself.</h2>
+          <p className="eyebrow">અમારા યાર્ડમાંથી</p>
+
+          <h2 className="section-title">
+            પથ્થર જાતે જોઈને પસંદ કરો.
+          </h2>
         </div>
 
         <div className="gallery">
@@ -40,10 +43,11 @@ export function GallerySection({ onOpenImage }: GallerySectionProps) {
                 type="button"
                 className="gallery-trigger"
                 onClick={() => onOpenImage(index)}
-                aria-label={`View larger image: ${image.caption}`}
+                aria-label={`મોટી image જુઓ: ${image.caption}`}
               >
                 <img src={image.src} alt={image.alt} loading="lazy" />
               </button>
+
               <figcaption>{image.caption}</figcaption>
             </motion.figure>
           ))}

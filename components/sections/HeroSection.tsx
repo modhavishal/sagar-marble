@@ -3,41 +3,51 @@
 import { motion } from 'framer-motion';
 import { ADDRESS, PHONE_HREF, PHONE_NUMBER } from '@/lib/constants';
 
-/** Number of stacked slabs drawn in the decorative hero artwork. */
+/** ડેકોરેટિવ hero artwork માં દર્શાવાતા stacked slabs ની સંખ્યા. */
 const SLAB_COUNT = 7;
 
-/** Opening screen: headline, call to action and the CSS-drawn slab stack. */
+/** શરૂઆતનો સ્ક્રીન: headline, call to action અને CSSથી બનાવેલ slab stack. */
 export function HeroSection() {
   return (
     <motion.header
-  className="hero"
-  id="top"
-  initial={false}
-  animate="visible">
+      className="hero"
+      id="top"
+      initial={false}
+      animate="visible"
+    >
       <div className="wrap hero-inner">
         <motion.div
           className="hero-copy"
           variants={{
             hidden: { opacity: 0, y: 28 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.7 },
+            },
           }}
         >
           <p className="eyebrow">
-            <span /> Stone for generations
+            <span /> પેઢીઓ સુધી ટકી રહે તેવો પથ્થર
           </p>
-          <h1>Bring the warmth of Rajasthan to your home.</h1>
+
+          <h1>રાજસ્થાનની સુંદરતા  તમારા ઘરમાં લાવો.</h1>
+
           <p className="hero-description">
-            Red sandstone, granite and tiles, selected with care at our yard on Madhavapur Road,
-            Pata.
+            માધવાપુર રોડ, પાતા ખાતે અમારા યાર્ડમાં કાળજીપૂર્વક પસંદ કરાયેલ
+            લાલ સેન્ડસ્ટોન, ગ્રેનાઈટ અને ટાઇલ્સ.
           </p>
+
           <div className="hero-actions">
             <a className="button button-primary" href={PHONE_HREF}>
-              Call {PHONE_NUMBER}
+              કૉલ કરો {PHONE_NUMBER}
             </a>
+
             <a className="button button-outline" href="#products">
-              Explore our stone
+              અમારા પથ્થરો જુઓ
             </a>
           </div>
+
           <p className="hero-location">
             {ADDRESS.locality} <span>·</span> {ADDRESS.region}
           </p>
@@ -48,21 +58,30 @@ export function HeroSection() {
           aria-hidden="true"
           variants={{
             hidden: { opacity: 0, scale: 0.94, x: 18 },
-            visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.9 } },
+            visible: {
+              opacity: 1,
+              scale: 1,
+              x: 0,
+              transition: { duration: 0.9 },
+            },
           }}
         >
           <div className="stone-mark">SM</div>
+
           <div className="stack">
             {Array.from({ length: SLAB_COUNT }, (_, index) => (
               <div className="slab" key={index} />
             ))}
           </div>
-          <span className="art-caption">Made by nature. Chosen by you.</span>
+
+          <span className="art-caption">
+            કુદરતે બનાવ્યું. તમે પસંદ કર્યું.
+          </span>
         </motion.div>
       </div>
 
       <a className="scroll-cue" href="#products">
-        Discover our collection <span>↓</span>
+        અમારો સંગ્રહ જુઓ <span>↓</span>
       </a>
     </motion.header>
   );

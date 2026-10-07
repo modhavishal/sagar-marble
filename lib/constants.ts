@@ -1,38 +1,37 @@
-/**
- * Single source of truth for the details that appear in more than one place:
- * contact numbers, links and the yard address.
- */
+export const SITE_NAME = 'સાગર માર્બલ';
+export const SITE_TAGLINE = 'તમારી જીવનશૈલી માટેનો પથ્થર.';
 
-export const SITE_NAME = 'Sagar Marble';
-export const SITE_TAGLINE = 'Stone for the way you live.';
+/** વેબસાઇટની ડિફૉલ્ટ ભાષા. */
+export const SITE_LANGUAGE = 'gu' as const;
+export const SITE_LOCALE = 'gu-IN' as const;
 
-/** Mobile number as it is shown to visitors. */
-export const PHONE_NUMBER = '9904422835';
+/** મુલાકાતીઓને દર્શાવવામાં આવતા મોબાઇલ નંબર. */
+export const PHONE_NUMBER = '૯૯૦૪૪૨૨૮૩૫';
+export const PHONE_NUMBER2 = '૯૯૨૪૨૭૬૮૪૬';
 
-/** Click-to-call target, including the country code. */
-export const PHONE_HREF = `tel:+91${PHONE_NUMBER}`;
+/** ફોન અને WhatsApp માટેના આંતરિક નંબર. */
+const PHONE_NUMBER_RAW = '9904422835';
+const PHONE_NUMBER_RAW2 = '9924276846';
 
-/** Opens a WhatsApp chat with the yard. */
-export const WHATSAPP_URL = `https://wa.me/91${PHONE_NUMBER}`;
+export const PHONE_HREF = `tel:+91${PHONE_NUMBER_RAW}`;
+export const PHONE_HREF2 = `tel:+91${PHONE_NUMBER_RAW2}`;
 
-/** Pre-encoded "Hello, I'm interested in your stone." */
-const WHATSAPP_MESSAGE_QUERY = 'Hello%2C%20I%27m%20interested%20in%20your%20stone.';
+export const WHATSAPP_URL = `https://wa.me/91${PHONE_NUMBER_RAW}`;
 
-/** Opens a WhatsApp chat with that message already typed out. */
-export const WHATSAPP_CHAT_URL = `${WHATSAPP_URL}?text=${WHATSAPP_MESSAGE_QUERY}`;
+const WHATSAPP_MESSAGE_QUERY =
+  'નમસ્તે%2C%20મને%20તમારા%20પથ્થરોમાં%20રસ%20છે.';
+
+export const WHATSAPP_CHAT_URL =
+  `${WHATSAPP_URL}?text=${WHATSAPP_MESSAGE_QUERY}`;
 
 export const ADDRESS = {
-  /** Street line shown under the map and in structured data. */
-  street: 'Madhavapur Road',
-  locality: 'Pata Village',
-  region: 'Gujarat',
+  street: 'માધવાપુર રોડ',
+  locality: 'પાતા ગામ',
+  region: 'ગુજરાત',
   country: 'IN',
-  /** Street plus village, as shown to visitors. */
-  display: 'Madhavapur Road, Pata Village',
-  /** Village plus state, used in short captions. */
-  short: 'Pata Village · Gujarat',
-  /** Compact place label for the footer. */
-  footerLabel: 'Pata, Gujarat',
+  display: 'માધવાપુર રોડ, પાતા ગામ',
+  short: 'પાતા ગામ · ગુજરાત',
+  footerLabel: 'પાતા, ગુજરાત',
 } as const;
 
 export const GEO = {
@@ -42,11 +41,10 @@ export const GEO = {
 
 const COORDINATES = `${GEO.latitude},${GEO.longitude}`;
 
-/** Opens driving directions in Google Maps. */
-export const MAPS_URL = `https://www.google.com/maps?q=${COORDINATES}`;
+export const MAPS_URL =
+  `https://www.google.com/maps?q=${COORDINATES}`;
 
-/** Embedded Google Map shown next to the contact details. */
-export const MAPS_EMBED_URL = `https://maps.google.com/maps?q=${COORDINATES}&z=15&output=embed`;
+export const MAPS_EMBED_URL =
+  `https://maps.google.com/maps?q=${COORDINATES}&z=15&output=embed`;
 
-/** Colour-scheme preference is remembered under this key. */
 export const THEME_STORAGE_KEY = 'sagar-theme';

@@ -20,21 +20,20 @@ const sans = Manrope({
 export const metadata: Metadata = {
   metadataBase: siteUrl,
 
-  title: 'Sagar Marble | Sandstone, Granite & Tiles in Pata, Gujarat',
+  title: 'સાગર માર્બલ | રાજસ્થાની લાલ પથ્થર, ગ્રેનાઈટ અને ટાઇલ્સ | પાતા, ગુજરાત',
 
   description:
-    'Buy Rajasthani red sandstone, granite and tiles at Sagar Marble, Madhavapur Road, Pata Village, Gujarat. Call Deva Modha or Malde Modha on 9904422835 for stone and custom cutting.',
+    'સાગર માર્બલ, માધવાપુર રોડ, પાતા વિલેજ, ગુજરાત ખાતે રાજસ્થાની રેડ સેન્ડસ્ટોન, ગ્રેનાઈટ અને ટાઇલ્સ ઉપલબ્ધ છે. સ્ટોન અને કસ્ટમ કટિંગ માટે 9904422835 પર સંપર્ક કરો.',
 
-  applicationName: 'Sagar Marble',
+  applicationName: 'સાગર માર્બલ',
 
-  // Favicon
   icons: {
     icon: '/images/favicon.png',
     shortcut: '/images/favicon.png',
     apple: '/images/favicon.png',
   },
 
-  category: 'Building materials',
+  category: 'બાંધકામ સામગ્રી',
 
   alternates: {
     canonical: '/',
@@ -53,31 +52,32 @@ export const metadata: Metadata = {
   },
 
   keywords: [
-    'Rajasthani red sandstone in Pata',
-    'sandstone supplier in Gujarat',
-    'granite and tiles in Pata',
-    'stone cutting in Pata Village',
-    'Sagar Marble Madhavapur Road',
+    'પાટામાં રાજસ્થાની રેડ સેન્ડસ્ટોન',
+    'ગુજરાતમાં સેન્ડસ્ટોન સપ્લાયર',
+    'પાટામાં ગ્રેનાઈટ અને ટાઇલ્સ',
+    'પાતા વિલેજમાં સ્ટોન કટિંગ',
+    'માધવાપુર રોડ સાગર માર્બલ',
+    'સાગર માર્બલ પાતા',
   ],
 
   openGraph: {
-    title: 'Sagar Marble | Sandstone, Granite & Tiles in Pata',
+    title: 'સાગર માર્બલ | સેન્ડસ્ટોન, ગ્રેનાઈટ અને ટાઇલ્સ | પાતા',
 
     description:
-      'Visit Sagar Marble on Madhavapur Road, Pata Village for Rajasthani sandstone, granite, tiles and custom stone cutting.',
+      'માધવાપુર રોડ, પાતા વિલેજ ખાતે સાગર માર્બલની મુલાકાત લો. રાજસ્થાની લાલ પથ્થર, ગ્રેનાઈટ, ટાઇલ્સ અને કસ્ટમ સ્ટોન કટિંગ ઉપલબ્ધ છે.',
 
     type: 'website',
 
-    locale: 'en_IN',
+    locale: 'gu_IN',
 
     url: '/',
 
-    siteName: 'Sagar Marble',
+    siteName: 'સાગર માર્બલ',
 
     images: [
       {
         url: '/images/rajasthani-sandstone-yard.jpg',
-        alt: 'Red Rajasthani sandstone slabs at Sagar Marble',
+        alt: 'સાગર માર્બલ ખાતે રાજસ્થાની રેડ સેન્ડસ્ટોનના સ્લેબ',
       },
     ],
   },
@@ -85,10 +85,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
 
-    title: 'Sagar Marble | Stone in Pata, Gujarat',
+    title: 'સાગર માર્બલ | પાતા, ગુજરાત',
 
     description:
-      'Rajasthani sandstone, granite, tiles and custom stone cutting at Madhavapur Road, Pata.',
+      'માધવાપુર રોડ, પાતા ખાતે રાજસ્થાની લાલ પથ્થર, ગ્રેનાઈટ, ટાઇલ્સ અને કસ્ટમ સ્ટોન કટિંગ.',
 
     images: ['/images/rajasthani-sandstone-yard.jpg'],
   },
@@ -114,7 +114,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="gu" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { PHONE_HREF, PHONE_NUMBER } from '@/lib/constants';
 import { machineryBenefits } from '@/data/site';
 
-/** Split panel: the cutting line photo beside its benefits and a call button. */
+/** કટિંગ મશીનરીનો ફોટો, તેના ફાયદા અને કૉલ બટન સાથેનું વિભાગ. */
 export function MachinerySection() {
   return (
     <motion.section
@@ -25,10 +25,13 @@ export function MachinerySection() {
         >
           <img
             src="/images/stone-cutting-workshop.jpg"
-            alt="Water-cooled stone cutting machine at Sagar Marble"
+            alt="સાગર માર્બલ ખાતે વોટર-કૂલ્ડ પથ્થર કટિંગ મશીન"
             loading="lazy"
           />
-          <span className="machinery-image-caption">Precision cutting at our yard</span>
+
+          <span className="machinery-image-caption">
+            અમારા યાર્ડમાં ચોક્કસ કટિંગ
+          </span>
         </motion.div>
 
         <motion.div
@@ -38,18 +41,24 @@ export function MachinerySection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, delay: 0.12 }}
         >
-          <p className="eyebrow">Made to measure</p>
-          <h2 className="section-title">Machine cut, 100% perfect finish</h2>
+          <p className="eyebrow">તમારા માપ પ્રમાણે</p>
+
+          <h2 className="section-title">
+            મશીન કટિંગ, 100% પરફેક્ટ ફિનિશ
+          </h2>
+
           <p className="section-intro">
-            Water-cooled cutting for a clean, accurate finish on every stone.
+            દરેક પથ્થર પર સ્વચ્છ અને ચોક્કસ ફિનિશ માટે વોટર-કૂલ્ડ કટિંગ.
           </p>
+
           <ul className="machinery-benefits">
             {machineryBenefits.map((benefit) => (
               <li key={benefit}>{benefit}</li>
             ))}
           </ul>
+
           <a className="button button-primary" href={PHONE_HREF}>
-            Call {PHONE_NUMBER}
+            કૉલ કરો {PHONE_NUMBER}
           </a>
         </motion.div>
       </div>
